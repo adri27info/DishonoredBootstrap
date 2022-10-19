@@ -124,6 +124,10 @@ article.main_poderes_trailer iframe.iframe {
   height: 400px !important;
 }
 
+article.main_contacto_article form.main_contacto_article_formulario textarea {
+  resize: none;
+}
+
 /* ------------ CLASES JS ------------ */
 
 .ocultar {
