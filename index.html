@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishonored 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="container bg-white min-vh-100 border border-3 border-dark p-0">
+      <header
+        class="w-100 border border-top-0 border-end-0 border-start-0 border-dark"
+      >
+        <div class="logo m-auto">
+          <img src="img/logo.png" class="img-fluid w-100" />
+        </div>
+        <nav class="w-100">
+          <ul
+            class="w-100 list-unstyled p-2 d-flex flex-column justify-content-center align-items-center flex-sm-row flex-sm-wrap justify-content-sm-around align-items-sm-center"
+          >
+            <li class="m-1">
+              <a
+                class="text-decoration-none text-black fw-bolder"
+                href="#inicio"
+                >Inicio</a
+              >
+            </li>
+            <li class="m-1">
+              <a
+                class="text-decoration-none text-black fw-bolder"
+                href="#historia"
+                >Historia</a
+              >
+            </li>
+            <li class="m-1">
+              <a
+                class="text-decoration-none text-black fw-bolder"
+                href="#personajes"
+                >Personajes</a
+              >
+            </li>
+            <li class="m-1">
+              <a
+                class="text-decoration-none text-black fw-bolder"
+                href="#poderes"
+                >Poderes</a
+              >
+            </li>
+            <li class="m-1">
+              <a
+                class="text-decoration-none text-black fw-bolder"
+                href="#contacto"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="main w-100">
+        <section class="main__trailer w-100 mb-5" id="inicio">
+          <iframe
+            class="w-100 h-100"
+            src="https://www.youtube.com/embed/3sEnjwz7Phk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </section>
+        <section class="main__historia p-2 mb-5" id="historia">
+          <h1 class="mb-5 text-center">Historia</h1>
+          <article class="main__historia_article w-100">
+            <p>
+              La historia de Disohnored 2 comienza en la corte del castillo de
+              Dunwall, 15 años después de los acontecimientos de la primera
+              entrega. Una Emily Kaldwin (ya mayor) y Corvo Attano esperan antes
+              la llegada de un invitado que resulta aparece acompañado junto a
+              varios guardias mecánicos. Pronto se descubrirá que esta visita es
+              en realidad un nuevo intento para apoderase del trono de Dunwall.
+              Tras el asesinato de todos los asistentes solo Emily Kaldwin y
+              Corvo Attano quedarán vivos.
+              <br />
+              <br />
+              Será en este momento en el que el juego nos ofrezca la posibilidad
+              de elegir con cuál de los dos personajes queremos completar la
+              historia y cuál de ellos quedará cristalizado. Desde este punto se
+              inicia una aventura en un intento por recuperar el trono y de
+              rescatar con vida al personaje que no hayamos elegido. Una
+              aventura que nos llevará por el reino de Karnaca. La zona
+              portuaria, una estación de tren, un laboratorio, un castillo y
+              algunos lugares más que no vamos a desvelar. Todo esto bajo la
+              posibilidad de elegir si queremos jugar la aventura usando las
+              fuerzas sobrenaturales (poderes) o por el contrario completar el
+              juego avanzando con sigilo mientras acabamos con cada uno de los
+              traidores que han atentado contra la corona de Dunwall.
+            </p>
+          </article>
+        </section>
+        <section class="main_personajes mb-5" id="personajes">
+          <div class="contenedorModal" id="contenedorModal">
+            <div class="modal" id="modal">
+              <div class="contenedorBotonCerrar">
+                <span class="material-symbols-outlined" id="btnCerrar">
+                  close
+                </span>
+              </div>
+
+              <div class="contenedorDatos">
+                <div class="contenedorImagenPersonaje">
+                  <img id="imagen_personaje" class="img-fluid" />
+                </div>
+                <div class="contenedorDatosPersonaje">
+                  <p id="parrafo_personaje"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="mb-5 text-center">Personajes</h1>
+          <article
+            class="main_personajes_article w-100 d-flex justify-content-around align-items-center flex-row flex-wrap"
+          >
+            <div class="main_personajes_article_card mb-5">
+              <img
+                src="img/emily_kaldwin.jpg"
+                class="main_personajes_article_card_img img-fluid"
+              />
+              <p
+                class="main_personajes_article_card_description text-center fs-2 fw-bold mt-2"
+              >
+                Emily Kaldwin
+              </p>
+              <div class="main_personajes_article_card_datos w-50 m-auto">
+                <button
+                  id="boton_emily_kaldwin"
+                  class="btn btn-dark text-center w-100 fw-bold text-white fs-6 p-2"
+                >
+                  Ver informacion
+                </button>
+              </div>
+            </div>
+
+            <div class="main_personajes_article_card mb-5">
+              <img
+                src="img/corvo_attano.jpg"
+                class="main_personajes_article_card_img img-fluid"
+              />
+              <p
+                class="main_personajes_article_card_description text-center fs-2 fw-bold mt-2"
+              >
+                Corvo Attano
+              </p>
+              <div class="main_personajes_article_card_datos w-50 m-auto">
+                <button
+                  id="boton_corvo_attano"
+                  class="btn btn-dark text-center w-100 fw-bold text-white fs-6 p-2"
+                >
+                  Ver informacion
+                </button>
+              </div>
+            </div>
+
+            <div class="main_personajes_article_card mb-5">
+              <img
+                src="img/delilah_copperspoon.jpg"
+                class="main_personajes_article_card_img img-fluid"
+              />
+              <p
+                class="main_personajes_article_card_description text-center fs-2 fw-bold mt-2"
+              >
+                Delilah copperspoon
+              </p>
+              <div class="main_personajes_article_card_datos w-50 m-auto">
+                <button
+                  id="boton_delilah_copperspoon"
+                  class="btn btn-dark text-center w-100 fw-bold text-white fs-6 p-2"
+                >
+                  Ver informacion
+                </button>
+              </div>
+            </div>
+
+            <div class="main_personajes_article_card mb-5">
+              <img
+                src="img/duke_luca.jpg"
+                class="main_personajes_article_card_img img-fluid"
+              />
+              <p
+                class="main_personajes_article_card_description text-center fs-2 fw-bold mt-2"
+              >
+                Duke Luca
+              </p>
+              <div class="main_personajes_article_card_datos w-50 m-auto">
+                <button
+                  id="boton_duke_luca"
+                  class="btn btn-dark text-center w-100 fw-bold text-white fs-6 p-2"
+                >
+                  Ver informacion
+                </button>
+              </div>
+            </div>
+
+            <div class="main_personajes_article_card mb-5">
+              <img
+                src="img/meagan_foster.jpg"
+                class="main_personajes_article_card_img img-fluid"
+              />
+              <p
+                class="main_personajes_article_card_description text-center fs-2 fw-bold mt-2"
+              >
+                Meagan foster
+              </p>
+              <div class="main_personajes_article_card_datos w-50 m-auto">
+                <button
+                  id="boton_meagan_foster"
+                  class="btn btn-dark text-center w-100 fw-bold text-white fs-6 p-2"
+                >
+                  Ver informacion
+                </button>
+              </div>
+            </div>
+
+            <div class="main_personajes_article_card mb-5">
+              <img
+                src="img/outsider.jpg"
+                class="main_personajes_article_card_img img-fluid"
+              />
+              <p
+                class="main_personajes_article_card_description text-center fs-2 fw-bold mt-2"
+              >
+                The outsider
+              </p>
+              <div class="main_personajes_article_card_datos w-50 m-auto">
+                <button
+                  id="boton_the_outsider"
+                  class="btn btn-dark text-center w-100 fw-bold text-white fs-6 p-2"
+                >
+                  Ver informacion
+                </button>
+              </div>
+            </div>
+
+            <div class="main_personajes_article_card mb-5">
+              <img
+                src="img/aramis_stilton.jpg"
+                class="main_personajes_article_card_img img-fluid"
+              />
+              <p
+                class="main_personajes_article_card_description text-center fs-2 fw-bold mt-2"
+              >
+                Aramis stilton
+              </p>
+              <div class="main_personajes_article_card_datos w-50 m-auto">
+                <button
+                  id="boton_aramis_stilton"
+                  class="btn btn-dark text-center w-100 fw-bold text-white fs-6 p-2"
+                >
+                  Ver informacion
+                </button>
+              </div>
+            </div>
+
+            <div class="main_personajes_article_card mb-5">
+              <img
+                src="img/kirin_jindosh.jpg"
+                class="main_personajes_article_card_img img-fluid"
+              />
+              <p
+                class="main_personajes_article_card_description text-center fs-2 fw-bold mt-2"
+              >
+                Kirin jindosh
+              </p>
+              <div class="main_personajes_article_card_datos w-50 m-auto">
+                <button
+                  id="boton_kirin_jindosh"
+                  class="btn btn-dark text-center w-100 fw-bold text-white fs-6 p-2"
+                >
+                  Ver informacion
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="main__poderes mb-5" id="poderes">
+          <h1 class="mb-5 text-center">Poderes</h1>
+          <article class="main_poderes_article w-100">
+            <p class="main_poderes_article_description p-2 mb-5">
+              En Dishonored 2, había unos cuantos personajes que tenían poderes
+              sobrenaturales pero los únicos personajes principales jugables que
+              tenían poderes eran Emily y Corvo. Estos poderes fueron otorgados
+              a través del forastero, el cuál les regalo su marca, la cual le
+              permitia realizer hechizos.
+            </p>
+          </article>
+          <article class="main_poderes_article_hechizos">
+            <p class="text-center fs-2 fw-bold mb-5 text-decoration-underline">
+              Emily Kaldwin
+            </p>
+            <article
+              class="main_poderes_emily d-flex flex-column flex-wrap justify-content-center align-items-center flex-lg-row flex-lg-nowrap justify-content-lg-between align-items-lg-center mb-5"
+            >
+              <div>
+                <img src="img/domino_emily.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Domino</p>
+              </div>
+              <div>
+                <img src="img/deshonrado_emily.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Deshonrado</p>
+              </div>
+              <div>
+                <img src="img/hipnotizar_emily.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Hipnotizar</p>
+              </div>
+              <div>
+                <img src="img/dopperganger_emily.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Dopperganger</p>
+              </div>
+              <div>
+                <img src="img/alcanze_lejano_emily.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Alcance</p>
+              </div>
+            </article>
+
+            <p class="text-center fs-2 fw-bold mb-5 text-decoration-underline">
+              Corvo Attano
+            </p>
+            <article
+              class="main_poderes_corvo d-flex flex-column flex-wrap justify-content-center align-items-center flex-lg-row flex-lg-nowrap justify-content-lg-between align-items-lg-center mb-5"
+            >
+              <div>
+                <img src="img/parpadeo_corvo.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Parpadeo</p>
+              </div>
+              <div>
+                <img src="img/posesion_corvo.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Posesion</p>
+              </div>
+              <div>
+                <img src="img/bend_time_corvo.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Bend time</p>
+              </div>
+              <div>
+                <img src="img/vision_oscura_corvo.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Vision oscura</p>
+              </div>
+              <div>
+                <img src="img/explosion_viento_corvo.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Explosion</p>
+              </div>
+              <div>
+                <img src="img/enjambre_devorador_corvo.jpg" class="img-fluid" />
+                <p class="text-center mt-2 fs-4">Enjambre</p>
+              </div>
+            </article>
+
+            <article class="main_poderes_trailer mb-5 w-100">
+              <iframe
+                class="w-100 h-100 iframe"
+                src="https://www.youtube.com/embed/62cKiGXWwFQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </article>
+          </article>
+        </section>
+        <section class="main__contacto mb-5" id="contacto">
+          <h1 class="mb-5 text-center">Contacto</h1>
+          <article class="main_contacto_article w-100">
+            <form
+              action="#"
+              class="w-75 m-auto main_contacto_article_formulario"
+            >
+              <div class="form-group mb-3">
+                <label for="email" class="mb-2">Email: </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                  placeholder="Introduce tu email"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="password" class="mb-2">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Introduce tu password"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Enviar
+              </button>
+            </form>
+          </article>
+        </section>
+      </section>
+      <footer class="w-100 bg-dark p-3 mt-5">
+        <p class="text-center text-white fs-4 mt-2">
+          Copyright by Adrian Martinez Vázquez
+        </p>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

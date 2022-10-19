@@ -1,0 +1,177 @@
+:root {
+  --header-bg: rgb(66, 66, 66);
+  --transform: translateY(-100vh);
+  --transition: transform 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+div.contenedorModal {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s 0.9s;
+  transform: var(--transform);
+  transition: var(--transition);
+}
+
+div.contenedorModal div.modal {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: block;
+  min-height: 100%;
+  transform: var(--transform);
+  transition: var(--transition);
+}
+
+div.modal div.contenedorBotonCerrar {
+  width: 100%;
+  text-align: right;
+  color: white;
+  background-color: rgb(40, 40, 40);
+}
+
+div.contenedorBotonCerrar span.material-symbols-outlined {
+  font-size: 30px;
+}
+
+div.modal div.contenedorDatos {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(40, 40, 40);
+  text-align: justify;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 50px;
+  color: white;
+}
+
+div.contenedorDatos div.contenedorImagenPersonaje {
+  width: 50%;
+}
+
+div.contenedorDatos div.contenedorDatosPersonaje {
+  width: 100%;
+}
+
+header div.logo {
+  width: 100px;
+}
+
+header nav ul li.m-1 a:hover {
+  text-decoration: underline !important;
+}
+
+section.main__trailer {
+  height: 500px;
+}
+
+section.main__historia article.main__historia_article {
+  text-align: justify;
+}
+
+section.main_personajes
+  article.main_personajes_article
+  div.main_personajes_article_card {
+  width: 600px;
+}
+
+div.main_personajes_article_card img:hover {
+  padding: 5px;
+  transition: all 0.3s ease-out;
+}
+
+section.main__poderes article.main_poderes_article p {
+  text-align: justify;
+}
+
+article.main_poderes_emily div,
+article.main_poderes_corvo div {
+  width: 150px;
+}
+
+article.main_poderes_emily div img,
+article.main_poderes_corvo div img {
+  width: 100%;
+}
+
+article.main_poderes_trailer iframe.iframe {
+  height: 400px !important;
+}
+
+/* ------------ CLASES JS ------------ */
+
+.ocultar {
+  display: none;
+}
+
+div.contenedorModal.modal-open {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.1s;
+  --transform: translateY(0);
+  --transition: transform 0.5s 0.5s;
+}
+
+div.container footer {
+  margin-top: 60px !important;
+}
+
+/* ------------ MEDIAS ------------ */
+
+/* Small devices */
+@media only screen and (max-width: 600px) {
+  article.main_poderes_emily div,
+  article.main_poderes_corvo div {
+    width: 100% !important;
+  }
+
+  article.main_contacto_article form.main_contacto_article_formulario {
+    width: 90% !important;
+  }
+}
+
+/*  Medium devices */
+@media only screen and (max-width: 768px) {
+  div.contenedorDatos div.contenedorImagenPersonaje {
+    width: 90%;
+  }
+}
+
+/* Large devices */
+@media only screen and (max-width: 992px) {
+  article.main_poderes_emily div,
+  article.main_poderes_corvo div {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+}
+
+/*  X-Large devices */
+@media only screen and (max-width: 1200px) {
+}
